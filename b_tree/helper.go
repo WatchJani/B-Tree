@@ -2,7 +2,6 @@ package b_tree
 
 import (
 	"bytes"
-	"fmt"
 )
 
 // return index of value or best index position in slice
@@ -42,10 +41,10 @@ func Search(node *Node, target []byte, degree int) *Node {
 		index := SearchInsert(node.keys, target, node.capacity-1)
 		if index < degree && node.keys[index].link != nil {
 			node = node.keys[index].link
-			fmt.Println("key")
+			// fmt.Println("key")
 		} else if index == node.capacity && node.link != nil {
 			node = node.link
-			fmt.Println("node")
+			// fmt.Println("node")
 		} else {
 			break
 		}

@@ -18,6 +18,10 @@ func (k *Key) UpdateLink(node *Node) {
 	k.link = node
 }
 
+func (k Key) GetLink() *Node {
+	return k.link
+}
+
 // func (k *Key) UpdateIndex(index int) {
 // 	k.index = append(k.index, index)
 // }
